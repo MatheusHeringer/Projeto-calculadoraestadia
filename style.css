@@ -23,12 +23,20 @@ body {
 
 h1 {
     font-size: 24px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-h2{
+h2 {
     font-size: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.modo {
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 label {
@@ -37,7 +45,9 @@ label {
     margin-top: 10px;
 }
 
-input {
+input[type="datetime-local"],
+input[type="number"],
+input[type="text"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;

@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Estadia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Estadia</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="tudo">
-        <form id="form">
-            <h1>Calculadora de Estadia</h1>
-            <h2>Powered by: Matheus H</h2>
-            
-            <label for="dataEntrada">Data e Hora de Entrada:</label>
-            <input type="datetime-local" id="dataEntrada" required>
-            
-            <label for="dataSaida">Data e Hora de Saída:</label>
-            <input type="datetime-local" id="dataSaida" required>
-            
-            <label for="valorHora">Valor por Hora (R$):</label>
-            <input type="number" id="valorHora" min="0" step="0.01" required>
-            
-            <label for="freetime">Freetime (HH:MM):</label>
-            <input type="text" id="freetime" placeholder="00:00" pattern="\d{2}:\d{2}" required>
-            
-            <button type="button" id="calcular">Calcular</button>
-            
-            <div class="resultado">
-                <p>Horas cobradas: <span id="horasCobradas">0</span></p>
-                <p>Valor Total: R$ <span id="valorTotal">0.00</span></p>
-            </div>
-        </form>
-    </div>
-    <script src="funcao.js"></script>
+  <div class="tudo">
+    <form id="form">
+      <h1>Calculadora de Estadia</h1>
+      <h2>Powered by: Matheus H</h2>
+
+      <div class="modo">
+        <label><input type="radio" name="modo" value="hora" checked> Cálculo por Hora</label>
+        <label><input type="radio" name="modo" value="dia"> Cálculo por Dia</label>
+      </div>
+
+      <label for="dataEntrada">Data e Hora de Entrada:</label>
+      <input type="datetime-local" id="dataEntrada" required>
+
+      <label for="dataSaida">Data e Hora de Saída:</label>
+      <input type="datetime-local" id="dataSaida" required>
+
+      <label for="valor">Valor (R$):</label>
+      <input type="number" id="valor" min="0" step="0.01" required>
+
+      <label for="freetime">Freetime:</label>
+      <input type="text" id="freetime" placeholder="00:00" required>
+
+      <button type="button" id="calcular">Calcular</button>
+
+      <div class="resultado">
+        <p>Unidades cobradas: <span id="horasCobradas">0</span></p>
+        <p>Valor Total: R$ <span id="valorTotal">0.00</span></p>
+      </div>
+    </form>
+  </div>
+  <script src="funcao.js"></script>
 </body>
 </html>
